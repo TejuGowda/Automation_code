@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test thread-count="5" name="TestFF(failed)" parallel="tests">
+    <parameter name="browser" value="FF"/>
+    <classes>
+      <class name="scripts.Test_ValidLogin">
+        <methods>
+          <include name="afterCondition"/>
+          <include name="preCondition"/>
+          <include name="testvalidLogin"/>
+        </methods>
+      </class> <!-- scripts.Test_ValidLogin -->
+      <class name="scripts.Test_InvalidLogin">
+        <methods>
+          <include name="afterCondition"/>
+          <include name="preCondition"/>
+          <include name="testInvalidLogin"/>
+        </methods>
+      </class> <!-- scripts.Test_InvalidLogin -->
+      <class name="scripts.Test_verifyVersion">
+        <methods>
+          <include name="afterCondition"/>
+          <include name="preCondition"/>
+          <include name="testVerifyVersion"/>
+        </methods>
+      </class> <!-- scripts.Test_verifyVersion -->
+    </classes>
+  </test> <!-- TestFF(failed) -->
+  <test thread-count="5" name="TestGg(failed)" parallel="tests">
+    <parameter name="browser" value="GC"/>
+    <classes>
+      <class name="scripts.Test_ValidLogin">
+        <methods>
+          <include name="afterCondition"/>
+          <include name="preCondition"/>
+          <include name="testvalidLogin"/>
+        </methods>
+      </class> <!-- scripts.Test_ValidLogin -->
+      <class name="scripts.Test_InvalidLogin">
+        <methods>
+          <include name="afterCondition"/>
+          <include name="preCondition"/>
+          <include name="testInvalidLogin"/>
+        </methods>
+      </class> <!-- scripts.Test_InvalidLogin -->
+      <class name="scripts.Test_verifyVersion">
+        <methods>
+          <include name="afterCondition"/>
+          <include name="preCondition"/>
+          <include name="testVerifyVersion"/>
+        </methods>
+      </class> <!-- scripts.Test_verifyVersion -->
+    </classes>
+  </test> <!-- TestGg(failed) -->
+</suite> <!-- Failed suite [Suite] -->

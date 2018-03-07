@@ -1,0 +1,25 @@
+package programs;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class StaleElementReferenceException {
+
+	public static void main(String[] args) throws InterruptedException {
+		
+		System.setProperty("webdriver.chrome.driver", "./Drivers/chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://demo.actitime.com/login.do");
+		WebElement un = driver.findElement(By.id("username"));
+		System.out.println(un);
+		un.sendKeys("ada");
+		//driver.get("https://demo.actitime.com/login.do");
+		driver.navigate().refresh();
+		Thread.sleep(1000000);
+		//WebElement un1 = driver.findElement(By.id("username"));
+		//System.out.println(un1);
+		un.sendKeys("sdsds");
+	}
+}

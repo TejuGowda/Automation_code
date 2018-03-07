@@ -1,0 +1,13 @@
+package programs;
+
+import org.eclipse.jetty.client.RedirectProtocolHandler;
+import org.testng.Reporter;
+import org.testng.annotations.Test;
+
+public class DemoB {
+	
+  @Test
+  public void print() {
+	  Reporter.log("Hello");
+  }
+}
